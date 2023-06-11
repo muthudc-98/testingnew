@@ -1,0 +1,34 @@
+<html>
+    <head>
+        {%block title%}
+        <title>Homepage</title>
+        {%endblock title%}
+    </head>
+    <center>
+    <body>
+        <h1>Student's details:</h1><br>
+        <table border='2'>
+            <thead>
+                <th>Roll number </th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>Gender</th>
+                <th>Action</th>
+            </thead>
+            {%for i in s%}
+            <tr>
+                <td>{{i.rollno}}</td>
+                <td>{{i.name}}</td>
+                <td>{{i.dep}}</td>
+                <td>{{i.gender}}</td>
+                <td><a href='#'>Update</a> | <a href='#'>Delete</a></td>
+            </tr>
+            {%endfor%}
+
+        
+        </table>
+    
+    </body>
+    </center>
+    
+</html>
